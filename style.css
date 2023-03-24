@@ -3,48 +3,48 @@
     src: url("assets/fonts/Ubuntu-Regular.ttf");
 }
 
-@font-face {
-    font-family: Ubuntu;
-    src: url("assets/fonts/Ubuntu-Bold.ttf");
-}
-
 * {
     box-sizing: border-box;
-    
-}
-
-html {
-    scroll-behavior: smooth; 
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Ubuntu-Regular', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: black;
     margin: 0;
     padding: 0;
 }
 
+body {
+    height: 100%;
+    font-family: 'Ubuntu-Regular', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;  
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* header */
+
+
 .header{
     background-color: #02545c;
-    margin-bottom: 50px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
-.container {
+.container-nav {
     max-width: 1440px;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    justify-content: left;
 }
 
-.main-container {
-    max-width: 1440px;
-    margin: 0 auto;
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
 .nav-list {
@@ -53,6 +53,10 @@ body {
     color: #b2dde1;
     transition: color 0.5s;
     list-style: none;
+}
+
+.nav-item {
+    text-decoration: none; 
 }
 
 .nav-link {
@@ -66,35 +70,55 @@ body {
     color: #fff;
 }
 
-.section{
+
+/* main */
+
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-item {
     width: 50%;
-    padding: 10px;
+    margin: 40px 0;
 }
 
-@media (max-width: 768px) {
-    .section {
-      width: 100%;
-    }
+.ava-img{
+    border-radius: 50%;
 }
 
-.section-title {
-    font-family: 'Ubuntu-Bold', sans-serif;
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 200px;
+}
+
+.main-item__title {
     font-size: 25px;
     color: #02545c;
     margin: 10px 0px;
 }
 
-.section-title-h1{
+.main-item__title-h1{
     font-size: 40px;
 }
 
-.list{
+.main-item__list{
     list-style: none;
     text-decoration: none;
 }
 
-li:before {
-    content: "▷ ";
+.main-item__list-item {
+    list-style: "▷ ";
 }
 
 .link {
@@ -106,27 +130,41 @@ li:before {
     color: #000;
 }
 
+
+/* footer */
+
+
 .footer{
-    margin-top: 50px;
     background-color: #013236;
-}
-.footer-container{
-    display: flex;
-    
-    color: #b2dde1;
-    margin: 0 auto;
+    height: 130px;
+    margin-top: 30px;
 }
 
-.footer-container a{
+.container-footer{
+    margin: 0 auto;
+    max-width: 1440px;
+    color: #b2dde1;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {
+    margin-left: 50px;
+}
+
+.container-footer a{
     text-decoration: none;
     color: #b2dde1;
 }
 
-.rsschool-logo{
-    padding: 30px 0;
-    width: 50%;
+.container-footer a:hover {
+    color: #fff;
 }
 
-.ava-img{
-    border-radius: 50%;
+.rsschool-logo{
+    padding: 30px 0;
+    width: 8em;
 }
